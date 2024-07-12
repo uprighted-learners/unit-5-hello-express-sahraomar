@@ -25,8 +25,8 @@ Your work will result in:
 - [ ] We need to create an NPM project so we can setup Express. Make sure you're in the `unit-5-hello-express` folder, and run `npm init -y` in your terminal.
 - [ ] You should see `package.json` in the root of your folder
 - [ ] To use Express, we need to install it first. Run `npm install express` in your terminal to install express
-- [ ] The next step you will need to do is to import `express`. Node.js imports work differently than JavaScript and React and use the following syntax:
-`const example = require('example')`
+- [ ] The next step you will need to do is to import `express`. Node.js imports work differently than JavaScript and React and use the follo wing syntax:
+      `const example = require('example')`
 - [ ] The second step is assigning the invocation of `express` to the variable `app`.
 - [ ] The third step is creating a variable to reference the port the app will run on. For this lab, we will be using 4000
 
@@ -42,11 +42,13 @@ Your work will result in:
 - [ ] The first route we want to set up is for the `/` route (also known as the index route).
 - [ ] We want to use a `.get` method, and we want to send the response of "Hello, home!"
 - [ ] Reference the following syntax to do so:
+
 ```js
-app.get('/example', (request, response) => {
-    response.send('Hello, example!')
-    })
+app.get("/example", (request, response) => {
+  response.send("Hello, example!");
+});
 ```
+
 - [ ] You can test this route by visiting localhost:4000 in the browser
 - [ ] Did you get this error? `Cannot GET /`. This is caused by an issue with your `GET` route.
 
@@ -58,18 +60,21 @@ app.get('/example', (request, response) => {
 ## Send HTML on your routes
 
 - [ ] Your `.send` methods can also send HTML. This is a basic example of server-side rendering. Change all of the responses on your routes to utilize HTML.
+
 ```js
-response.send("<h1>Hello, <b>example</b>!</h1>")
+response.send("<h1>Hello, <b>example</b>!</h1>");
 ```
 
 ## Set up request params
 
 - [ ] Servers can also utilize params passed in the URL.
+
 ```js
-app.get('/:key', (request,response)=>{
-  console.log(request.params)
-})
+app.get("/:key", (request, response) => {
+  console.log(request.params);
+});
 ```
+
 - [ ] Try visiting an address that does not have a route associated with it and see what prints to the terminal.
 
 ## Utilize request params
